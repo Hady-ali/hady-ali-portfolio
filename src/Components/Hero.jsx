@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-24 pb-16 px-5 sm:px-8 lg:px-12" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(124,58,237,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(79,70,229,0.06) 0%, transparent 50%), #0a0a0f' }}>
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-40 items-center">
         
         {/* النص */}
         <div className="space-y-6">
