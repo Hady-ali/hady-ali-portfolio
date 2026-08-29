@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { DATA } from '../data/data';
+import { DATA } from '../Data/data';
 
 const Skills = () => {
   const ref = useRef(null);

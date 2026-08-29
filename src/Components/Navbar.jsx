@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DATA } from '../data/data';
+import { DATA } from '../Data/data';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

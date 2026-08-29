@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DATA } from '../data/data';
+import { DATA } from '../Data/data';
 import myPhoto from '../assets/photo.jpg'; // ⚠️ تأكد إن الصورة اسمها photo.jpg في مجلد assets
 
 const Hero = () => {
