@@ -76,11 +76,12 @@ const Contact = () => {
           <div>
             <form onSubmit={handleSubmit} className="glass-card p-6 rounded-2xl space-y-5">
               
-              {/* Name - الليبل حاوي الإنبت جواه */}
-              <label className="block">
-                <span className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Your Name</span>
+              {/* Name */}
+              <div>
+                <label htmlFor="contact-name" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Your Name</label>
                 <input 
                   type="text" 
+                  id="contact-name"
                   name="name" 
                   autoComplete="name" 
                   value={formState.name} 
@@ -89,13 +90,14 @@ const Contact = () => {
                   className="contact-input" 
                   required 
                 />
-              </label>
+              </div>
 
-              {/* Email - الليبل حاوي الإنبت جواه */}
-              <label className="block">
-                <span className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Email Address</span>
+              {/* Email */}
+              <div>
+                <label htmlFor="contact-email" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Email Address</label>
                 <input 
                   type="email" 
+                  id="contact-email"
                   name="email" 
                   autoComplete="email" 
                   value={formState.email} 
@@ -104,12 +106,13 @@ const Contact = () => {
                   className="contact-input" 
                   required 
                 />
-              </label>
+              </div>
 
-              {/* Message - الليبل حاوي التيكست إيريا جواه */}
-              <label className="block">
-                <span className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Message</span>
+              {/* Message */}
+              <div>
+                <label htmlFor="contact-message" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Message</label>
                 <textarea 
+                  id="contact-message"
                   name="message" 
                   autoComplete="off" 
                   value={formState.message} 
@@ -119,7 +122,7 @@ const Contact = () => {
                   className="contact-input resize-none" 
                   required 
                 ></textarea>
-              </label>
+              </div>
 
               <button type="submit" className="btn-primary w-full justify-center">
                 {submitted ? <><i className="fa-regular fa-circle-check"></i> Sent!</> : <><i className="fa-regular fa-paper-plane"></i> Send Message</>}
