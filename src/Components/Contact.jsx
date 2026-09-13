@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { DATA } from '../Data/data';
+import { DATA } from '../data/data';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -18,7 +18,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // هنا بنستخدم خدمة FormSubmit (مش محتاجة تسجيل حساب، أول مرة بتبعت إيميل تأكيد)
     try {
       const formData = new FormData();
       formData.append('name', formState.name);
@@ -26,7 +25,6 @@ const Contact = () => {
       formData.append('message', formState.message);
       formData.append('_subject', 'New Portfolio Message from Hady Ali Website!');
 
-      // ⚠️ هذا هو الإيميل المستلم للرسائل (اتأكد إنه صح)
       const response = await fetch('https://formsubmit.co/ajax/enghadyali0@gmail.com', {
         method: 'POST',
         body: formData,
@@ -77,18 +75,55 @@ const Contact = () => {
 
           <div>
             <form onSubmit={handleSubmit} className="glass-card p-6 rounded-2xl space-y-5">
+              
+              {/* Name Field */}
               <div>
-                <label className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Your Name</label>
-                <input type="text" name="name" value={formState.name} onChange={handleChange} placeholder="John Doe" className="contact-input" required />
+                <label htmlFor="name" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Your Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  autoComplete="name" 
+                  value={formState.name} 
+                  onChange={handleChange} 
+                  placeholder="John Doe" 
+                  className="contact-input" 
+                  required 
+                />
               </div>
+
+              {/* Email Field */}
               <div>
-                <label className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Email Address</label>
-                <input type="email" name="email" value={formState.email} onChange={handleChange} placeholder="john@example.com" className="contact-input" required />
+                <label htmlFor="email" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Email Address</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  autoComplete="email" 
+                  value={formState.email} 
+                  onChange={handleChange} 
+                  placeholder="john@example.com" 
+                  className="contact-input" 
+                  required 
+                />
               </div>
+
+              {/* Message Field */}
               <div>
-                <label className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Message</label>
-                <textarea name="message" value={formState.message} onChange={handleChange} rows="4" placeholder="Tell me about your project..." className="contact-input resize-none" required></textarea>
+                <label htmlFor="message" className="text-white/40 text-xs uppercase tracking-wider block mb-1.5">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  autoComplete="off" 
+                  value={formState.message} 
+                  onChange={handleChange} 
+                  rows="4" 
+                  placeholder="Tell me about your project..." 
+                  className="contact-input resize-none" 
+                  required 
+                ></textarea>
               </div>
+
               <button type="submit" className="btn-primary w-full justify-center">
                 {submitted ? <><i className="fa-regular fa-circle-check"></i> Sent!</> : <><i className="fa-regular fa-paper-plane"></i> Send Message</>}
               </button>
