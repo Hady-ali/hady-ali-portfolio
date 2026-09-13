@@ -13,7 +13,6 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-24 px-5 sm:px-8 lg:px-12 bg-white/[0.01]">
       <div ref={ref} className={`max-w-7xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <span className="text-purple-400 text-sm font-semibold uppercase tracking-wider">Credentials</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2">Certifications &amp; <span className="gradient-text">Education</span></h2>
         <div className="grid md:grid-cols-2 gap-8 mt-12">
           <div className="space-y-4">

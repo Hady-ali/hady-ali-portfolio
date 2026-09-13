@@ -14,7 +14,6 @@ const Skills = () => {
     <section id="skills" className="py-24 px-5 sm:px-8 lg:px-12">
       <div ref={ref} className={`max-w-7xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-center">
-          <span className="text-purple-400 text-sm font-semibold uppercase tracking-wider">Expertise</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2">My <span className="gradient-text">Skills</span> &amp; Technologies</h2>
           <p className="text-white/40 max-w-2xl mx-auto mt-3 text-sm">A comprehensive toolkit I use to build modern, performant web applications</p>
         </div>
