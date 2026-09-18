@@ -75,6 +75,14 @@ export const DATA = {
       link: 'https://mobil-system.vercel.app/'
     },
     {
+      title: 'FitCore Gym System',
+      role: 'React.js & Supabase',
+      description: 'Production-ready gym system featuring e-commerce store, class booking engine, and 4-tier membership system. Implemented Row Level Security across 10+ tables, built custom Cart Context, and designed complete admin dashboard for products, inventory, orders, and members.',
+      tech: ['React.js', 'Supabase', 'RLS', 'TailwindCSS', 'Vite', 'Context API'],
+      icon: 'fa-solid fa-dumbbell',
+      link: 'https://gym-system-byhadyali.vercel.app/'
+    },
+    {
       title: 'E-Commerce',
       role: 'React.js & Vercel',
       description: 'Scalable e-commerce website with dynamic product filtering, search functionality, and a smooth shopping experience.',
